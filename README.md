@@ -1,15 +1,15 @@
 # Rails Girls Signup
 
-* Ruby version: ruby '2.3.0'
+* Ruby version: '2.3.0'
 
-* Database Postgres
+* Rails version: '5.0.0'
 
-* To run the test suite: bundle exec rspec
+* Database: Postgres
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Deployment instructions  
 $ `git clone git@github.com:jendiamond/railsgirls_signup.git`  
 $ `bundle`  
 $ `rake db:create`  
 $ `rake db:migrate`
+
+* To run the test suite: `bundle exec rspec`
