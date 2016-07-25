@@ -1,0 +1,2 @@
+json.extract! user, :id, :first_name, :last_name, :email, :twitter_handle, :phone, :zipcode, :twitter_handle, :over_21, :age, :operating_system, :rating, :coach, :workshop, :accepted, :tutorial_progress, :created_at, :updated_at
+json.url user_url(user, format: :json)
