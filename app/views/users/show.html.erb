@@ -1,38 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
+<h4>
+  <strong><%= @user.first_name.capitalize %>
+  <%= @user.last_name.capitalize  %></strong> &nbsp; -- &nbsp; <%= @user.email %>
+</h4>
+
+<h5>
+  <%= @user.operating_system %> &nbsp; | &nbsp; Rating: 
+  <%= @user.rating %>
 </p>
 
 <p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
+  <strong>Coach:</strong>
+  <%= @user.coach %>
 </p>
 
 <p>
-  <strong>Email:</strong>
   <%= @user.email %>
 </p>
 
 <p>
-  <strong>Twitter handle:</strong>
-  <%= @user.twitter_handle %>
+  https://twitter.com/<%= @user.twitter_handle %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
   <%= @user.phone %>
 </p>
 
 <p>
   <strong>Zipcode:</strong>
   <%= @user.zipcode %>
-</p>
-
-<p>
-  <strong>Twitter handle:</strong>
-  <%= @user.twitter_handle %>
 </p>
 
 <p>
@@ -43,21 +40,6 @@
 <p>
   <strong>Age:</strong>
   <%= @user.age %>
-</p>
-
-<p>
-  <strong>Operating system:</strong>
-  <%= @user.operating_system %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @user.rating %>
-</p>
-
-<p>
-  <strong>Coach:</strong>
-  <%= @user.coach %>
 </p>
 
 <p>

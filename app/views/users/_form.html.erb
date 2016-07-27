@@ -1,62 +1,13 @@
-<%= form_for(user) do |f| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :twitter_handle %>
-    <%= f.text_field :twitter_handle %>
-  </div>
-
-  <div class="field">
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-  </div>
-
-  <div class="field">
-    <%= f.label :zipcode %>
-    <%= f.text_field :zipcode %>
-  </div>
-
-  <div class="field">
-    <%= f.label :over_21 %>
-    <%= f.check_box :over_21 %>
-  </div>
-
-  <div class="field">
-    <%= f.label :age %>
-    <%= f.number_field :age %>
-  </div>
-
-  <div class="field">
-    <%= f.label :operating_system %>
-    <%= f.text_field :operating_system %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for @user do |f| %>
+  <%= f.input :first_name, required: true %>
+  <%= f.input :last_name, required: true %>
+  <%= f.input :email, required: true %>
+  <%= f.input :twitter_handle, prompt: "https://twitter.com/", required: false %>
+  <%= f.input :phone, required: false %>
+  <%= f.input :zipcode, required: false %>
+  <%= f.input :over_21, required: true %>
+  <%= f.input :age, collection: 13..20, prompt: "If not 21 Select your age" %>
+  <%= f.input :operating_system, collection: [ "Mac", "Linux", "Windows"], include_blank: false, required: true %>
+  <%= f.input :rating, collection: 1..5, as: :radio_buttons  %>
+  <%= f.button :submit %>
 <% end %>
