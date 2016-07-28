@@ -14,4 +14,5 @@ $ `rake db:create`
 $ `rake db:migrate`  
 $ `rake db:seed`
 
-* To run the test suite: $ `bundle exec rspec`
+* To run the test suite:  
+$ `bundle exec rspec`
