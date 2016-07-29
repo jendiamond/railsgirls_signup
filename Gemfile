@@ -3,6 +3,7 @@ ruby '2.3.0'
 
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.2'
+gem 'devise'
 gem 'jquery-rails'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
