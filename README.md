@@ -1,5 +1,7 @@
 # Rails Girls Signup
 
+This is a site for potential candidates to Rails Girls.
+
 * Ruby version: '2.3.0'
 
 * Rails version: '5.0.0'  
